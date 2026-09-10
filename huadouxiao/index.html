@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都小道士邱云免费阅读-都市修仙小说全集在线阅读</title>
+    <meta name="description" content="花都小道士邱云免费阅读，提供都市修仙题材小说《花都小道士》主角邱云的完整章节在线阅读，包括最新章节目录、剧情简介、角色分析与书友评论，打造流畅舒适的免费小说阅读体验。">
+    <meta name="keywords" content="花都小道士邱云免费阅读,花都小道士,邱云,都市修仙小说,小说在线阅读,免费小说">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f2ee;
+            color: #2c2c2c;
+            line-height: 1.7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 18px;
+        }
+
+        /* ===== Header ===== */
+        .site-header {
+            background: #1f2a3a;
+            padding: 16px 0;
+            border-bottom: 3px solid #c9a063;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            font-size: 36px;
+            line-height: 1;
+            color: #c9a063;
+            background: rgba(255,255,255,0.08);
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        .logo-text h1 {
+            font-size: 22px;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .logo-text p {
+            font-size: 13px;
+            color: #aeb9c7;
+        }
+        .header-search {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 30px;
+            padding: 4px 6px 4px 18px;
+            width: 300px;
+        }
+        .header-search input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+            background: transparent;
+            color: #333;
+        }
+        .header-search button {
+            background: #c9a063;
+            border: none;
+            color: #1f2a3a;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .header-search button:hover {
+            background: #dab57a;
+        }
+
+        /* ===== Navigation ===== */
+        .main-nav {
+            background: #263648;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .nav-list li a {
+            display: block;
+            padding: 12px 22px;
+            color: #d8dee8;
+            font-size: 15px;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+        .nav-list li a:hover,
+        .nav-list li a.active {
+            color: #fff;
+            border-bottom-color: #c9a063;
+            background: rgba(255,255,255,0.04);
+        }
+        .nav-hot {
+            background: #c94f4f;
+            color: #fff !important;
+            border-radius: 20px;
+            padding: 4px 14px !important;
+            margin: 6px 10px;
+            font-size: 13px !important;
+        }
+
+        /* ===== Hero 首屏 ===== */
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #2d3e55 100%);
+            color: #f0ede6;
+            padding: 48px 0 56px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -80px;
+            top: -60px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201,160,99,0.2) 0%, transparent 70%);
+        }
+        .hero-inner {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+        .book-cover {
+            width: 200px;
+            height: 280px;
+            background: linear-gradient(145deg, #3a4d63, #1f2a3a);
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 30px;
+            color: #c9a063;
+            font-weight: 700;
+            letter-spacing: 6px;
+            text-align: center;
+            line-height: 1.4;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            padding: 20px 8px;
+        }
+        .hero-info {
+            flex: 1;
+            min-width: 280px;
+        }
+        .hero-info .tag {
+            display: inline-block;
+            background: #c9a063;
+            color: #1f2a3a;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 3px 12px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+        .hero-info h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+        .hero-info .meta {
+            color: #b6c2d0;
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .hero-info .desc {
+            font-size: 15px;
+            color: #d2d8e0;
+            margin-bottom: 24px;
+            max-width: 600px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #c9a063;
+            color: #1f2a3a;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.2s;
+            box-shadow: 0 4px 14px rgba(201,160,99,0.3);
+        }
+        .btn-primary:hover {
+            background: #dab57a;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.4);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* ===== 最新更新 ===== */
+        .section {
+            padding: 42px 0;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #e0d6c8;
+            padding-bottom: 10px;
+        }
+        .section-title h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1f2a3a;
+            border-left: 4px solid #c9a063;
+            padding-left: 14px;
+            line-height: 1.4;
+        }
+        .section-title .more-link {
+            font-size: 14px;
+            color: #8a7a5c;
+            background: #f0e9df;
+            padding: 4px 14px;
+            border-radius: 20px;
+            transition: 0.2s;
+        }
+        .section-title .more-link:hover {
+            background: #e2d5c3;
+        }
+        .chapter-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 14px;
+        }
+        .chapter-item {
+            background: #fff;
+            border-radius: 10px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            border: 1px solid #eee7de;
+            transition: all 0.2s;
+        }
+        .chapter-item:hover {
+            border-color: #c9a063;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+        .chapter-num {
+            background: #f1e7da;
+            color: #7a5a2e;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            padding: 2px 10px;
+            white-space: nowrap;
+        }
+        .chapter-name {
+            flex: 1;
+            font-size: 15px;
+            color: #3a3a3a;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .chapter-name:hover {
+            color: #c9a063;
+        }
+        .chapter-date {
+            font-size: 13px;
+            color: #aaa;
+            white-space: nowrap;
+        }
+
+        /* ===== 内容区域双栏 ===== */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
+            align-items: start;
+        }
+        .main-col {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .side-col {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        /* 书籍介绍 */
+        .book-intro h3 {
+            font-size: 20px;
+            margin-bottom: 14px;
+            color: #1f2a3a;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0e8de;
+        }
+        .book-intro p {
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #4a4a4a;
+            text-indent: 2em;
+        }
+        .intro-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .intro-tags span {
+            background: #f0e9df;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #6b4f26;
+        }
+
+        /* 角色卡 */
+        .characters {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+        }
+        .character-card {
+            background: #faf7f2;
+            border-radius: 10px;
+            padding: 16px;
+            border: 1px solid #efe6da;
+            transition: 0.2s;
+        }
+        .character-card:hover {
+            border-color: #c9a063;
+        }
+        .character-card .name {
+            font-weight: 700;
+            color: #1f2a3a;
+            margin-bottom: 6px;
+            font-size: 17px;
+        }
+        .character-card .role {
+            font-size: 13px;
+            color: #c9a063;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .character-card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* 侧栏组件 */
+        .side-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .side-card h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1f2a3a;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0e8de;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .side-card h4::before {
+            content: '';
+            width: 4px;
+            height: 18px;
+            background: #c9a063;
+            border-radius: 2px;
+        }
+        .rank-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee5da;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+        .rank-num {
+            background: #e4d5c0;
+            color: #5a4632;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .rank-list li:nth-child(1) .rank-num { background: #c9a063; color: #fff; }
+        .rank-list li:nth-child(2) .rank-num { background: #b5a28a; color: #fff; }
+        .rank-list li:nth-child(3) .rank-num { background: #a08a6e; color: #fff; }
+        .rank-title {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .rank-title:hover {
+            color: #c9a063;
+        }
+        .rank-type {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        /* 阅读指南 */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .guide-item {
+            display: flex;
+            gap: 12px;
+            font-size: 14px;
+            color: #555;
+        }
+        .guide-step {
+            background: #c9a063;
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        /* ===== 读者热议 ===== */
+        .comments-section {
+            margin-top: 30px;
+        }
+        .comment-item {
+            background: #faf7f2;
+            border-radius: 10px;
+            padding: 16px 18px;
+            margin-bottom: 12px;
+            border-left: 3px solid #c9a063;
+        }
+        .comment-item .user {
+            font-weight: 600;
+            font-size: 14px;
+            color: #1f2a3a;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .comment-item .time {
+            font-weight: 400;
+            color: #aaa;
+            font-size: 13px;
+        }
+        .comment-item p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .faq-item {
+            border: 1px solid #eee7de;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+        }
+        .faq-q {
+            padding: 14px 18px;
+            font-weight: 600;
+            font-size: 15px;
+            background: #faf7f2;
+            cursor: default;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-q::before {
+            content: 'Q';
+            background: #c9a063;
+            color: #fff;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .faq-a {
+            padding: 4px 18px 14px 50px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* ===== Footer ===== */
+        .site-footer {
+            background: #1f2a3a;
+            color: #9aa7b5;
+            padding: 30px 0 24px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #2f3d4f;
+            width: 100%;
+            font-size: 13px;
+        }
+        .footer-links a {
+            color: #c9a063;
+            margin: 0 8px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-search {
+                width: 100%;
+                margin-top: 10px;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .logo-area {
+                justify-content: center;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .book-cover {
+                width: 160px;
+                height: 220px;
+                font-size: 24px;
+            }
+            .hero-info h2 {
+                font-size: 26px;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .nav-list li a {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+            .main-col {
+                padding: 18px;
+            }
+            .characters {
+                grid-template-columns: 1fr 1fr;
+            }
+            .chapter-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .characters {
+                grid-template-columns: 1fr;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo-area">
+            <div class="logo-icon">道</div>
+            <div class="logo-text">
+                <h1>花都小道士邱云</h1>
+                <p>免费阅读 · 都市修仙小说</p>
+            </div>
+        </div>
+        <div class="header-search">
+            <input type="text" placeholder="搜索书名、章节或角色">
+            <button type="button">搜索</button>
+        </div>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <div class="container">
+        <ul class="nav-list">
+            <li><a href="#" class="active">首页</a></li>
+            <li><a href="#">最新章节</a></li>
+            <li><a href="#">章节目录</a></li>
+            <li><a href="#">角色介绍</a></li>
+            <li><a href="#">书友讨论</a></li>
+            <li><a href="#" class="nav-hot">最新更新 12章</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="book-cover">花都小道士</div>
+        <div class="hero-info">
+            <div class="tag">都市修仙 · 免费连载</div>
+            <h2>花都小道士邱云</h2>
+            <div class="meta">
+                <span>作者：佚名</span>
+                <span>类型：都市 / 修仙</span>
+                <span>状态：连载中</span>
+                <span>今日更新：第428章</span>
+            </div>
+            <p class="desc">少年邱云身怀道家秘术，从山村踏入繁华都市。在灯红酒绿的花都中，他一面以道士身份济世救人，一面面对各方势力的明争暗斗。且看小道士如何以一身道行，在都市中闯出一片天地，解开身世之谜，成就非凡传奇。</p>
+            <div class="btn-group">
+                <a href="#" class="btn-primary">开始阅读 · 最新第428章</a>
+                <a href="#" class="btn-outline">查看全部章节</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h3>最近更新章节</h3>
+            <a href="#" class="more-link">全部章节目录 →</a>
+        </div>
+        <div class="chapter-list">
+            <a href="#" class="chapter-item">
+                <span class="chapter-num">第428章</span>
+                <span class="chapter-name">都市暗流涌动</span>
+                <span class="chapter-date">2小时前</span>
+            </a>
+            <a href="#" class="chapter-item">
+                <span class="chapter-num">第427章</span>
+                <span class="chapter-name">深夜来客</span>
+                <span class="chapter-date">今天</span>
+            </a>
+            <a href="#" class="chapter-item">
+                <span class="chapter-num">第426章</span>
+                <span class="chapter-name">道法显威</span>
+                <span class="chapter-date">昨天</span>
+            </a>
+            <a href="#" class="chapter-item">
+                <span class="chapter-num">第425章</span>
+                <span class="chapter-name">神秘古玉</span>
+                <span class="chapter-date">昨天</span>
+            </a>
+            <a href="#" class="chapter-item">
+                <span class="chapter-num">第424章</span>
+                <span class="chapter-name">师姐的嘱托</span>
+                <span class="chapter-date">3天前</span>
+            </a>
+            <a href="#" class="chapter-item">
+                <span class="chapter-num">第423章</span>
+                <span class="chapter-name">地下拳场</span>
+                <span class="chapter-date">3天前</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+    <div class="container content-grid">
+        <div class="main-col">
+            <div class="book-intro">
+                <h3>《花都小道士邱云》小说简介</h3>
+                <p>《花都小道士》是一部以现代都市为背景的修仙题材网络小说，主角邱云自幼在深山道观中长大，跟随师父学习道法、医术与风水相术。十八岁那年，师父命他下山入世历练，邱云由此来到繁华的花都市，寄居于城中村一间破旧的老宅中。</p>
+                <p>花都表面光鲜亮丽，实则暗流涌动。地产商、地下势力、古武世家、隐世门派纷纷登场。邱云凭借一身扎实的道门功夫和过人的智慧，在一次偶然的驱邪事件中崭露头角，逐渐被卷入花都的势力旋涡。他一边用道术帮助普通百姓解决灵异难题，一边追查自己身世之谜——为何师父从不提及他的父母？那块随身携带的玉佩究竟藏着什么秘密？</p>
+                <p>故事融合了都市生活、道家文化、热血战斗与悬疑探秘，节奏明快，情节环环相扣。邱云从一个不谙世事的小道士，逐步成长为能在都市中独当一面的修行者，期间结识了形形色色的伙伴与对手，也经历了友情、恩义与情感的多重考验。</p>
+                <div class="intro-tags">
+                    <span>道家法术</span>
+                    <span>都市异能</span>
+                    <span>热血爽文</span>
+                    <span>身世迷局</span>
+                    <span>风水相术</span>
+                    <span>轻松幽默</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="font-size: 20px; color:#1f2a3a; border-bottom: 2px solid #f0e8de; padding-bottom: 8px; margin-bottom: 10px;">主要角色</h3>
+                <div class="characters">
+                    <div class="character-card">
+                        <div class="name">邱云</div>
+                        <div class="role">主角 · 小道士</div>
+                        <p>自幼在道观长大，性格坚毅中带着几分狡黠，擅长符箓与拳法。下山后以道士身份行走花都，重情重义。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="name">苏婉清</div>
+                        <div class="role">女主角 · 医生</div>
+                        <p>花都市第一医院外科医生，因一次灵异事件与邱云相识，性格冷静理性，逐渐对邱云产生信任。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="name">陈九爷</div>
+                        <div class="role">花都地下人物</div>
+                        <p>表面上是个古董商人，实则是花都地下情报网的掌控者，与道门颇有渊源，对邱云亦敌亦友。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="name">玄真道长</div>
+                        <div class="role">邱云师父</div>
+                        <p>邱云的授业恩师，云游四方的高人，似乎对邱云的身世知道很多，却始终守口如瓶。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 读者热议 -->
+            <div class="comments-section">
+                <h3 style="font-size: 20px; color:#1f2a3a; border-bottom: 2px solid #f0e8de; padding-bottom: 8px; margin-bottom: 16px;">读者热议</h3>
+                <div class="comment-item">
+                    <div class="user">
+                        <span>书迷@青山不改</span>
+                        <span class="time">刚刚</span>
+                    </div>
+                    <p>从第100章开始追的，邱云这个角色真的很有魅力，既有一身本事又接地气，打斗场面描写得很细致，推荐！</p>
+                </div>
+                <div class="comment-item">
+                    <div class="user">
+                        <span>读者@花都小生</span>
+                        <span class="time">15分钟前</span>
+                    </div>
+                    <p>更新速度挺稳定的，最近这几章剧情越来越紧张了，那个古玉的秘密到底什么时候能揭开啊，期待后续。</p>
+                </div>
+                <div class="comment-item">
+                    <div class="user">
+                        <span>道友@清风徐来</span>
+                        <span class="time">1小时前</span>
+                    </div>
+                    <p>难得看到把道家元素写得这么自然的都市文，符箓、法咒都有考究，不是乱编，作者应该做了不少功课。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 侧边栏 -->
+        <aside class="side-col">
+            <div class="side-card">
+                <h4>人气榜单</h4>
+                <ul class="rank-list">
+                    <li>
+                        <span class="rank-num">1</span>
+                        <span class="rank-title">花都小道士邱云</span>
+                        <span class="rank-type">都市修仙</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">2</span>
+                        <span class="rank-title">都市玄门医仙</span>
+                        <span class="rank-type">都市异能</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">3</span>
+                        <span class="rank-title">山野小道士在都市</span>
+                        <span class="rank-type">轻松修仙</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">4</span>
+                        <span class="rank-title">龙王赘婿的修行路</span>
+                        <span class="rank-type">都市爽文</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">5</span>
+                        <span class="rank-title">风水大师在花都</span>
+                        <span class="rank-type">风水相术</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="side-card">
+                <h4>阅读指南</h4>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <span class="guide-step">1</span>
+                        <span>点击上方“开始阅读”按钮，可直接跳转到最新章节，无需注册登录。</span>
+                    </div>
+                    <div class="guide-item">
+                        <span class="guide-step">2</span>
+                        <span>在章节目录中，可按顺序浏览所有章节，支持翻页与进度记忆。</span>
+                    </div>
+                    <div class="guide-item">
+                        <span class="guide-step">3</span>
+                        <span>本站所有内容均为免费阅读，无任何弹窗广告干扰，手机端同样适配。</span>
+                    </div>
+                    <div class="guide-item">
+                        <span class="guide-step">4</span>
+                        <span>如发现章节缺失或错乱，可通过页面底部联系方式反馈给管理员。</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side-card">
+                <h4>热门标签</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span style="background:#f0e9df; padding:4px 12px; border-radius:20px; font-size:13px;">#道士</span>
+                    <span style="background:#f0e9df; padding:4px 12px; border-radius:20px; font-size:13px;">#都市修仙</span>
+                    <span style="background:#f0e9df; padding:4px 12px; border-radius:20px; font-size:13px;">#邱云</span>
+                    <span style="background:#f0e9df; padding:4px 12px; border-radius:20px; font-size:13px;">#免费阅读</span>
+                    <span style="background:#f0e9df; padding:4px 12px; border-radius:20px; font-size:13px;">#道家法术</span>
+                    <span style="background:#f0e9df; padding:4px 12px; border-radius:20px; font-size:13px;">#身世之谜</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="section-title">
+            <h3>常见问题解答</h3>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">《花都小道士邱云》真的可以免费阅读吗？</div>
+                <div class="faq-a">是的，本站收录的《花都小道士》全部章节均免费向读者开放，不需要充值或购买VIP，直接点击章节即可阅读。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">这部小说目前更新到多少章了？</div>
+                <div class="faq-a">根据页面展示，目前最新章节为第428章，更新时间较为稳定。具体章节数量可能随时变化，以页面显示为准。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">是否支持手机端在线阅读？</div>
+                <div class="faq-a">本站采用响应式设计，在手机、平板和电脑上均可获得良好的阅读体验，无需下载专用App。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">小说完结了吗？</div>
+                <div class="faq-a">《花都小道士》目前仍在连载中，故事主线尚未完结。建议读者关注页面更新，以获取最新章节推送。</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div>
+                <p style="font-size:16px; color:#d8dee8; font-weight:600;">花都小道士邱云免费阅读</p>
+                <p style="margin-top:6px;">都市修仙 · 全集在线 · 每日稳定更新</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">关于本站</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">建议反馈</a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>本站为个人爱好者搭建的阅读平台，仅供学习交流使用。如涉及版权问题，请与我们联系处理。</p>
+            <p style="margin-top:6px;">© 2024 花都小道士邱云 阅读站 · 尊重原创，支持正版</p>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                  </html>
