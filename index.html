@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wuwubox资源盒子-精选网络资源导航与实用工具指南</title>
+    <meta name="description" content="wuwubox资源盒子是一个专注于发现、整理与分享优质网络资源、实用软件工具、学习素材和效率应用的资源导航平台，帮助你快速找到所需资源，提升工作与学习效率。">
+    <meta name="keywords" content="wuwubox资源盒子,资源盒子,资源导航,实用工具,软件推荐,学习资源,素材下载,效率工具">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #0f1117;
+            color: #e5e7eb;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .site-header {
+            background: rgba(15, 17, 23, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #6c63ff, #3ecf8e);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.35);
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: #3ecf8e;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .main-nav a {
+            color: #a0a3b1;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #fff;
+        }
+
+        .main-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #3ecf8e;
+            border-radius: 2px;
+        }
+
+        .header-search {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 8px 16px;
+            gap: 8px;
+            width: 260px;
+        }
+
+        .header-search input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .header-search input::placeholder {
+            color: #6b7280;
+        }
+
+        .header-search svg {
+            width: 18px;
+            height: 18px;
+            stroke: #6b7280;
+            flex-shrink: 0;
+        }
+
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #fff;
+            margin: 5px 0;
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: radial-gradient(ellipse at 70% 20%, rgba(108, 99, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(62, 207, 142, 0.1) 0%, transparent 50%);
+            padding: 80px 0 60px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #6c63ff, #3ecf8e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #a0a3b1;
+            max-width: 720px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        /* Search Bar */
+        .search-section {
+            padding: 32px 0;
+        }
+
+        .search-container {
+            max-width: 640px;
+            margin: 0 auto;
+            display: flex;
+            gap: 12px;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 14px 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-container input:focus {
+            border-color: #6c63ff;
+        }
+
+        .search-container button {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #6c63ff, #5a52d5);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .search-container button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        /* Category Section */
+        .category-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title .icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #6c63ff, #3ecf8e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .section-desc {
+            color: #6b7280;
+            margin-bottom: 32px;
+            font-size: 15px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background: #1a1d27;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(108, 99, 255, 0.4);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .category-icon.purple {
+            background: rgba(108, 99, 255, 0.15);
+        }
+
+        .category-icon.green {
+            background: rgba(62, 207, 142, 0.15);
+        }
+
+        .category-icon.orange {
+            background: rgba(255, 159, 67, 0.15);
+        }
+
+        .category-icon.blue {
+            background: rgba(59, 130, 246, 0.15);
+        }
+
+        .category-card h3 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .category-card p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Featured Resources */
+        .featured-section {
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .resource-card {
+            background: #1a1d27;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .resource-thumb {
+            height: 160px;
+            background: linear-gradient(135deg, #1e1e2e, #2a2a3e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            position: relative;
+        }
+
+        .resource-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(108, 99, 255, 0.9);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .resource-content {
+            padding: 20px;
+        }
+
+        .resource-content h3 {
+            font-size: 17px;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .resource-content p {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .resource-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .resource-tag {
+            display: flex;
+            gap: 8px;
+        }
+
+        .resource-tag span {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        /* Update Section */
+        .update-section {
+            padding: 60px 0;
+        }
+
+        .update-list {
+            background: #1a1d27;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+
+        .update-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 16px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: background 0.3s;
+        }
+
+        .update-item:last-child {
+            border-bottom: none;
+        }
+
+        .update-item:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .update-date {
+            font-size: 13px;
+            color: #6b7280;
+            min-width: 80px;
+            font-family: monospace;
+        }
+
+        .update-title {
+            flex: 1;
+            color: #e5e7eb;
+            font-size: 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .update-title:hover {
+            color: #6c63ff;
+        }
+
+        .update-type {
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .update-type.new {
+            background: rgba(62, 207, 142, 0.15);
+            color: #3ecf8e;
+        }
+
+        .update-type.update {
+            background: rgba(108, 99, 255, 0.15);
+            color: #6c63ff;
+        }
+
+        .update-type.hot {
+            background: rgba(255, 159, 67, 0.15);
+            color: #ff9f43;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .tool-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px;
+            background: #1a1d27;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: border-color 0.3s;
+        }
+
+        .tool-item:hover {
+            border-color: rgba(108, 99, 255, 0.3);
+        }
+
+        .tool-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(108, 99, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .tool-info h4 {
+            color: #fff;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .tool-info p {
+            color: #6b7280;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #1a1d27;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 500;
+            color: #e5e7eb;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .faq-question .arrow {
+            transition: transform 0.3s;
+            color: #6b7280;
+        }
+
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 24px 20px;
+            max-height: 500px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.05), rgba(62, 207, 142, 0.05));
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 40px;
+            background: linear-gradient(135deg, #6c63ff, #5a52d5);
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.4);
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                height: 60px;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            .header-search {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 40px 0 32px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .hero-stats {
+                gap: 32px;
+            }
+
+            .stat-number {
+                font-size: 24px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .search-container {
+                flex-direction: column;
+                padding: 0 16px;
+            }
+
+            .search-container button {
+                width: 100%;
+            }
+
+            .cta-section h2 {
+                font-size: 24px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+            }
+
+            .update-item {
+                padding: 12px 16px;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+
+            .update-date {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">w</div>
+                <div class="logo-text">wuwubox<span>资源盒子</span></div>
+            </a>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#categories">资源分类</a></li>
+                    <li><a href="#featured">精选推荐</a></li>
+                    <li><a href="#update">最新更新</a></li>
+                    <li><a href="#tools">实用工具</a></li>
+                    <li><a href="#faq">帮助中心</a></li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" placeholder="搜索资源...">
+            </div>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>发现优质网络资源<br>尽在 <span>wuwubox资源盒子</span></h1>
+            <p class="hero-subtitle">wuwubox资源盒子是一个精心维护的资源导航与分享平台，致力于为用户发现、整理和推荐各类实用资源，涵盖软件工具、学习素材、效率应用等多个领域，帮助你节省搜索时间，提升工作与学习效率。</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">收录资源</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,200+</div>
+                    <div class="stat-label">实用工具</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50,000+</div>
+                    <div class="stat-label">活跃用户</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">专人维护</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" placeholder="输入关键词查找资源，如：视频剪辑工具、设计素材、学习资料...">
+                <button>搜索资源</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section" id="categories">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">📂</span>
+                资源分类导航
+            </h2>
+            <p class="section-desc">wuwubox资源盒子将各类资源系统分类，方便你快速定位所需内容</p>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon purple">💻</div>
+                    <h3>软件工具</h3>
+                    <p>收录办公效率、系统优化、安全防护等各类常用软件及工具，并提供使用指南。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon green">🎨</div>
+                    <h3>设计素材</h3>
+                    <p>汇集高质量图标、字体、模板、UI套件等设计资源，助力创意工作。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon orange">📚</div>
+                    <h3>学习资料</h3>
+                    <p>整理编程开发、语言学习、职业考试等教育类资源，促进自我提升。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon blue">🎬</div>
+                    <h3>媒体资源</h3>
+                    <p>涵盖图片素材、视频素材、音频音效等多媒体资源，丰富创作内容。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon purple">⚙️</div>
+                    <h3>效率应用</h3>
+                    <p>推荐时间管理、笔记记录、任务协作等提升效率的优质应用。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon green">🌐</div>
+                    <h3>网站导航</h3>
+                    <p>整理高质量网站与在线服务，涵盖资讯、娱乐、工作等多个领域。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon orange">📱</div>
+                    <h3>手机应用</h3>
+                    <p>精选实用手机App，覆盖生活服务、社交通讯、影音娱乐等各类需求。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon blue">🛠️</div>
+                    <h3>开发资源</h3>
+                    <p>提供开发者常用的代码库、API工具、框架教程等专业技术资源。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">⭐</span>
+                精选资源推荐
+            </h2>
+            <p class="section-desc">wuwubox资源盒子团队每周精选优质资源，确保内容质量与实用性</p>
+            <div class="featured-grid">
+                <div class="resource-card">
+                    <div class="resource-thumb">
+                        🎨
+                        <span class="resource-badge">热门</span>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Figma 设计协作平台</h3>
+                        <p>业界领先的界面设计协作工具，支持多人实时协作与云端存储，极大提升设计团队效率。</p>
+                        <div class="resource-meta">
+                            <div class="resource-tag">
+                                <span>设计</span>
+                                <span>协作</span>
+                            </div>
+                            <span>已收录 2,300+ 人使用</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-thumb">
+                        📊
+                        <span class="resource-badge">推荐</span>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Notion 知识管理工具</h3>
+                        <p>集笔记、任务、数据库、Wiki于一体的多功能知识管理应用，适合个人与团队使用。</p>
+                        <div class="resource-meta">
+                            <div class="resource-tag">
+                                <span>效率</span>
+                                <span>笔记</span>
+                            </div>
+                            <span>已收录 3,100+ 人使用</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-thumb">
+                        📷
+                        <span class="resource-badge">精选</span>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Unsplash 免费图库</h3>
+                        <p>提供超过300万张高质量免费图片资源，可用于商业与个人项目，无需版权担忧。</p>
+                        <div class="resource-meta">
+                            <div class="resource-tag">
+                                <span>素材</span>
+                                <span>图片</span>
+                            </div>
+                            <span>已收录 4,500+ 人使用</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="update-section" id="update">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">🕐</span>
+                最新动态
+            </h2>
+            <p class="section-desc">wuwubox资源盒子每日更新，第一时间了解新增资源与工具</p>
+            <div class="update-list">
+                <div class="update-item">
+                    <span class="update-date">2025-01-15</span>
+                    <a href="#" class="update-title">新增「剪映专业版」使用教程与素材包合集</a>
+                    <span class="update-type new">新增</span>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">2025-01-14</span>
+                    <a href="#" class="update-title">推荐10款提升个人生产力的开源工具</a>
+                    <span class="update-type hot">热门</span>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">2025-01-13</span>
+                    <a href="#" class="update-title">更新「VS Code」插件精选清单（2025版）</a>
+                    <span class="update-type update">更新</span>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">2025-01-12</span>
+                    <a href="#" class="update-title">整理免费商用字体资源，告别版权困扰</a>
+                    <span class="update-type new">新增</span>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">2025-01-11</span>
+                    <a href="#" class="update-title">2025年最值得关注的AI工具盘点</a>
+                    <span class="update-type hot">热门</span>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">2025-01-10</span>
+                    <a href="#" class="update-title">「Everything」文件搜索工具使用技巧汇总</a>
+                    <span class="update-type update">更新</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">🧰</span>
+                实用工具推荐
+            </h2>
+            <p class="section-desc">wuwubox资源盒子精选各类实用工具，帮你解决日常使用中的问题</p>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <div class="tool-icon">🔍</div>
+                    <div class="tool-info">
+                        <h4>Everything 文件搜索</h4>
+                        <p>轻量级Windows文件搜索工具，毫秒级响应，支持正则表达式，极大提升文件查找效率。</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">📝</div>
+                    <div class="tool-info">
+                        <h4>Typora Markdown编辑器</h4>
+                        <p>极简风格的Markdown编辑工具，所见即所得，支持导出多种格式，适合写作与文档记录。</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">🔐</div>
+                    <div class="tool-info">
+                        <h4>1Password 密码管理器</h4>
+                        <p>安全可靠的密码管理工具，支持多平台同步，自动填充密码，保障账号安全。</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">📁</div>
+                    <div class="tool-info">
+                        <h4>7-Zip 压缩工具</h4>
+                        <p>开源免费的压缩软件，支持多种压缩格式，高压缩率，无广告无捆绑，值得信赖。</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">🌐</div>
+                    <div class="tool-info">
+                        <h4>Firefox 浏览器</h4>
+                        <p>注重隐私保护的开源浏览器，拥有丰富的扩展生态，自定义程度高，安全可靠。</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">📧</div>
+                    <div class="tool-info">
+                        <h4>Thunderbird 邮件客户端</h4>
+                        <p>开源跨平台的邮件管理工具，支持多账户管理、日历与任务功能，功能强大。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title" style="justify-content: center; text-align: center;">
+                <span class="icon">❓</span>
+                常见问题解答
+            </h2>
+            <p class="section-desc" style="text-align: center;">关于wuwubox资源盒子的使用问题与解答</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>wuwubox资源盒子是什么？</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        wuwubox资源盒子是一个资源导航与分享平台，我们致力于收集、整理和推荐各类优质网络资源，包括软件工具、设计素材、学习资料等。所有资源均经过人工筛选，确保安全可靠、实用有效。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>wuwubox资源盒子的资源都是免费的吗？</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        平台收录的资源分为免费和付费两类。我们会明确标注资源的版权与价格信息，免费资源可直接获取使用；付费资源我们仅提供官方链接与介绍，不提供破解或盗版内容。我们尊重知识产权，鼓励支持正版。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>如何快速找到我需要的资源？</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        你可以通过顶部搜索框输入关键词直接搜索，也可以根据资源分类进行浏览。此外，我们每周更新的精选推荐和最新动态也能帮助你发现新资源。如仍未找到，欢迎通过反馈渠道告诉我们，我们将尽力协助寻找。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>wuwubox资源盒子收录资源的标准是什么？</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        我们主要从三个方面考量：一是实用性，资源必须能解决实际问题；二是安全性，确保无病毒、无恶意代码；三是口碑与评价，优先选择用户评价良好、广泛认可的资源。同时我们会定期复查，移除失效或质量下降的资源。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>如何建议wuwubox资源盒子收录新资源？</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        我们非常欢迎用户推荐优质资源。你可以通过页面底部的反馈链接或联系邮箱提交资源建议，我们会有专人进行审核评估。一旦通过审核，该资源将尽快收录并标注推荐来源。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>想要第一时间获取优质资源？</h2>
+            <p>订阅wuwubox资源盒子的更新通知，每周精选资源与实用工具推荐，不错过任何精彩内容。</p>
+            <button class="cta-button">立即订阅更新</button>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="logo-icon" style="width: 32px; height: 32px; font-size: 14px;">w</div>
+                <span style="color: #fff; font-weight: 600;">wuwubox资源盒子</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">联系合作</a></li>
+                <li><a href="#">使用条款</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">意见反馈</a></li>
+            </ul>
+            <div class="copyright">
+                © 2025 wuwubox资源盒子 版权所有
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(function(question) {
+            question.addEventListener('click', function() {
+                var item = this.parentElement;
+                var isActive = item.classList.contains('active');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(function(faq) {
+                    faq.classList.remove('active');
+                });
+
+                // Toggle clicked
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile menu toggle (basic)
+        var menuToggle = document.querySelector('.menu-toggle');
+        var mainNav = document.querySelector('.main-nav');
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', function() {
+                if (mainNav.style.display === 'flex') {
+                    mainNav.style.display = 'none';
+                } else {
+                    mainNav.style.display = 'flex';
+                    mainNav.style.flexDirection = 'column';
+                    mainNav.style.position = 'absolute';
+                    mainNav.style.top = '60px';
+                    mainNav.style.left = '0';
+                    mainNav.style.right = '0';
+                    mainNav.style.background = '#0f1117';
+                    mainNav.style.padding = '16px 24px';
+                    mainNav.style.gap = '16px';
+                    mainNav.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+                }
+            });
+        }
+
+        // Search button click
+        var searchBtn = document.querySelector('.search-container button');
+        var searchInput = document.querySelector('.search-container input');
+
+        if (searchBtn && searchInput) {
+            searchBtn.addEventListener('click', function() {
+                var keyword = searchInput.value.trim();
+                if (keyword) {
+                    alert('正在搜索："' + keyword + '"，资源内容正在整理中，敬请期待！');
+                } else {
+                    alert('请输入搜索关键词');
+                }
+            });
+        }
+
+        // CTA button
+        var ctaBtn = document.querySelector('.cta-button');
+        if (ctaBtn) {
+            ctaBtn.addEventListener('click', function() {
+                alert('订阅功能即将上线，敬请关注wuwubox资源盒子！');
+            });
+        }
+    </script>
+</body>
+  </html>
